@@ -154,3 +154,6 @@ KICK 6667 v : expulsado
 -> QUIT
 
  (...)
+
+ ## Credit
+The project was developed by @valarcon42madrid and myself.
