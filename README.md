@@ -142,6 +142,9 @@ JOIN 6667
 FINALMENTE PODREMOS EMPLEAR COMANDOS PARA COMUNICARNOS COMO:
 
 · PING
+ ```bash
+PING
+```
 
 Prueba simple que solo tiene función fática (o de medida del tiempo que tardan en viajar los paquetes de datos).
 
@@ -149,11 +152,16 @@ Prueba simple que solo tiene función fática (o de medida del tiempo que tardan
 · PRIVMSG
 
 Mensaje privado a un usuario
-
+ ```bash
+PRIVMSG (TARGET) "message"
+```
 
 · NOTICE
 
 Mensaje a un objetivo (canal o usuario)
+ ```bash
+NOTICE (TARGET) "message"
+```
 
  . LIST
 Muestra los canales y sus topics, se usa:
