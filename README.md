@@ -1,23 +1,23 @@
-##PRUEBA DE OTRO CLIENTE IRC (WEECHAT):
+## PRUEBA DE OTRO CLIENTE IRC (WEECHAT):
 
- ABRIR WEECHAT CON DOCKER
+ ## ABRIR WEECHAT CON DOCKER
  
  docker run -ti weechat/weechat
 
- EN TERMINAL CONSULTAR LA IP QUE EMPLEA DOCKER:
+ ## EN TERMINAL CONSULTAR LA IP QUE EMPLEA DOCKER
  
  ifconfig | grep inet
  
  (*y copiamos 1º inet despues de las inet6, una con netmask y brodcast a continuación)
  (TAMBIEN SE PUEDE EMPLEAR host.docker.internal)
  
- EN WEECHAT: 
+ ## EN WEECHAT
  
- AÑADIR SERVIDOR:
+ ## AÑADIR SERVIDOR
  
 /server add CUALQUIERNOMBRE (I.P.consultada)/6667 -tls
 
-IMPORTANTE:
+IMPORTANTE
 
 se desactiva el tls:
 /set irc.server_default.tls off
@@ -32,7 +32,7 @@ CONFIGURAR AL GUSTO:
 /set irc.server.libera.realname "My real name"
 ...
 
-CONECTARSE: 
+## CONECTARSE
 /connect CUALQUIERNOMBRE
 
 /join "GRUPO"
@@ -44,7 +44,7 @@ PARA HABLAR A ALGUIEN/ALGO:
 -----------------------------------------------
 
 
-¿CÓMO USAR EL EJECUTABLE?:
+## ¿CÓMO USAR EL EJECUTABLE?:
 
 Trás hacer make ejecute en terminal:
 
@@ -53,7 +53,7 @@ Trás hacer make ejecute en terminal:
 Ésto iniciará el servidor y permitirá a los usuarios unirse.
 
 
-Desde otra terminal y sin finalizar la ejecución anterior podremos unirnos e identificarnos mediante los comandos:
+## Comandos
 
 
 ·  NC
@@ -115,7 +115,7 @@ Muestra los canales y sus topics, se usa:
 "LIST channel channel channel" (PARA CANALES CONCRETOS)
 
 _______________________________________________
-POR ULTIMO CABE DESTACAR:
+## POR ULTIMO CABE DESTACAR:
 
 -> EL COMANDO MODE, EMPLEADO PARA FIJAR O ELIMINAR OPCIONES DE UN OBJETIVO 
 
