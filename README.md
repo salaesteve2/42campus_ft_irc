@@ -1,8 +1,10 @@
 ## PRUEBA DE OTRO CLIENTE IRC (WEECHAT):
 
  ## ABRIR WEECHAT CON DOCKER
+ ```bash
+docker run -ti weechat/weechat
+```
  
- docker run -ti weechat/weechat
 
  ## EN TERMINAL CONSULTAR LA IP QUE EMPLEA DOCKER
  
