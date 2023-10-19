@@ -7,8 +7,11 @@ docker run -ti weechat/weechat
  
 
  ## EN TERMINAL CONSULTAR LA IP QUE EMPLEA DOCKER
+
+  ```bash
+ifconfig | grep inet
+```
  
- ifconfig | grep inet
  
  (*y copiamos 1º inet despues de las inet6, una con netmask y brodcast a continuación)
  (TAMBIEN SE PUEDE EMPLEAR host.docker.internal)
@@ -16,31 +19,55 @@ docker run -ti weechat/weechat
  ## EN WEECHAT
  
  ## AÑADIR SERVIDOR
- 
+
+   ```bash
 /server add CUALQUIERNOMBRE (I.P.consultada)/6667 -tls
+```
+
 
 IMPORTANTE
 
 se desactiva el tls:
+   ```bash
 /set irc.server_default.tls off
+```
+
 
 Se introduce el password:
+   ```bash
 /set irc.server.CUALQUIERNOMBRE.password (PASSWORDPUESTAEN./IRCSERV_6667_AQUI)
+```
+
 
 CONFIGURAR AL GUSTO:
 
+  ```bash
 /set irc.server.libera.username "My user name"
+```
 
+
+  ```bash
 /set irc.server.libera.realname "My real name"
+```
+
 ...
 
 ## CONECTARSE
+ ```bash
 /connect CUALQUIERNOMBRE
+```
 
+
+ ```bash
 /join "GRUPO"
+```
+
 
 PARA HABLAR A ALGUIEN/ALGO:
+ ```bash
 /query TARGET mensaje
+```
+
 
 
 -----------------------------------------------
@@ -50,7 +77,10 @@ PARA HABLAR A ALGUIEN/ALGO:
 
 Trás hacer make ejecute en terminal:
 
+ ```bash
 ./ircserv 6667 Password
+```
+
 
 Ésto iniciará el servidor y permitirá a los usuarios unirse.
 
@@ -62,7 +92,10 @@ Trás hacer make ejecute en terminal:
 
 netcat permite leer y escribir datos entre dos redes.
 
+ ```bash
 nc -c 127.0.0.1 6667
+```
+
 
 
 
@@ -70,28 +103,40 @@ nc -c 127.0.0.1 6667
 
 para definir tu nick o apodo:
 
+ ```bash
 NICK v
+```
+
 
 
 ·  PASS
 
 para unirse/logearse
 
+ ```bash
 PASS Password
+```
+
 
 
 ·  USER
 
 define las características del usuario
 
-USER valarcon 6667 127.0.0.1 victor
+ ```bash
+USER sasalama 6667 127.0.0.1 salus
+```
+
 
 
 · JOIN
 
 para unirse al canal
 
+ ```bash
 JOIN 6667
+```
+
 
 
 FINALMENTE PODREMOS EMPLEAR COMANDOS PARA COMUNICARNOS COMO:
@@ -132,7 +177,9 @@ MODE canal +/-Flag "TARGETifNEEDED"
     
 MODE channel flags (user/args)
 
-EJ: MODE 6667 +b usuario
+ ```bash
+MODE 6667 +b usuario
+```
 
 
 -> INVITE Channel Nickname
@@ -142,14 +189,18 @@ EJ: MODE 6667 +b usuario
 
 Abandona el/los canales especificados
 
-syntax: PART channels "message-optional"
+ ```bash
+PART channels "message-optional"
+```
 
 
 -> KICK
 
 echar a alguien
 
-syntax: KICK channel client "message-optional"
+ ```bash
+KICK channel client "message-optional"
+```
 
 KICK 6667 v : expulsado
 
